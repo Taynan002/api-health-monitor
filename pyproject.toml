@@ -1,0 +1,19 @@
+[build-system]
+requires = ["setuptools>=68"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "api-health-monitor"
+version = "0.1.0"
+description = "Concurrent API health checks with retries, latency tracking, and structured reports."
+readme = "README.md"
+requires-python = ">=3.10"
+license = { text = "MIT" }
+authors = [{ name = "Taynan Vieira" }]
+keywords = ["api", "monitoring", "http", "automation", "reliability"]
+
+[project.scripts]
+api-health = "healthmon.cli:main"
+
+[tool.setuptools.packages.find]
+include = ["healthmon*"]
